@@ -1,67 +1,175 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <title>Prakash | Novels</title>
-  <link rel="stylesheet" href="home.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Hind:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>उपन्यास संग्रह | प्रकाश</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Hind:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ===== Global Reset ===== */
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Hind', sans-serif; background:#fdf6f0; color:#222; line-height:1.6; }
+  a { text-decoration:none; color:inherit; }
+
+  /* ===== Header ===== */
+  header.top {
+    text-align:center; padding:50px 20px 30px;
+    background:linear-gradient(to right, #ffb347, #ffcc33);
+    color:#222;
+  }
+  header.top h1 { font-family: 'Playfair Display', serif; font-size:3rem; margin-bottom:10px; }
+  header.top p { font-size:1.2rem; margin-bottom:20px; }
+  .back-btn {
+    display:inline-block; padding:10px 20px; background:#d35400; color:#fff; border-radius:25px;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .back-btn:hover { transform:scale(1.05); background:#e67e22; }
+
+  /* ===== Novel Grid / Carousel ===== */
+  .novel-grid-wrapper {
+    position: relative;
+    max-width: 1200px; margin:0 auto; padding:40px 0;
+    overflow:hidden;
+  }
+  .novel-grid {
+    display:flex; gap:25px; transition: transform 0.5s ease;
+  }
+
+  .novel-card {
+    flex:0 0 260px; background:#fff6f0; border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1); padding:25px 20px 20px;
+    position:relative; overflow:hidden; transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .novel-card:hover { transform: translateY(-5px); box-shadow:0 12px 30px rgba(0,0,0,0.15); }
+
+  /* ===== Thumbnail ===== */
+  .novel-card img {
+    width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;
+    transition: transform 0.3s;
+  }
+  .novel-card img:hover { transform: scale(1.03); }
+
+  .novel-card h2 {
+    font-family:'Playfair Display', serif; font-size:1.8rem; margin-bottom:10px; color:#d35400;
+  }
+  .novel-card .hook { font-style:italic; margin-bottom:10px; color:#555; }
+  .novel-card .desc { margin-bottom:15px; color:#333; }
+  .novel-card .btn {
+    display:inline-block; padding:10px 20px; background:#d35400; color:#fff; border-radius:25px;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .novel-card .btn:hover { transform:scale(1.05); background:#e67e22; }
+
+  /* ===== Tags ===== */
+  .novel-card .tag { position:absolute; top:15px; left:15px; padding:6px 12px; border-radius:12px; font-size:0.9rem; font-weight:bold; background:#ff6b6b; color:#fff; }
+  .novel-card.coming .tag { background:#999; }
+
+  /* ===== Fade Animation ===== */
+  .fade { opacity:0; animation: fadeIn 1s forwards; }
+  @keyframes fadeIn { to { opacity:1; } }
+
+  /* ===== Carousel Buttons ===== */
+  .carousel-btn {
+    position:absolute; top:50%; transform:translateY(-50%);
+    background:rgba(0,0,0,0.4); color:#fff; border:none; font-size:2rem;
+    padding:10px 15px; border-radius:50%; cursor:pointer; transition:background 0.2s;
+    z-index:5;
+  }
+  .carousel-btn:hover { background:rgba(0,0,0,0.6); }
+  .carousel-btn.left { left:10px; }
+  .carousel-btn.right { right:10px; }
+
+  /* ===== Footer ===== */
+  footer { text-align:center; padding:25px 20px; background:#222; color:#fff; margin-top:50px; }
+
+  /* ===== Responsive ===== */
+  @media(max-width: 600px) {
+    header.top h1 { font-size:2rem; }
+    .novel-card h2 { font-size:1.5rem; }
+    .novel-card img { height:150px; }
+    .novel-grid { gap:15px; }
+  }
+</style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="header fade">
-    <h1>मेरी रचनाएँ</h1>
-    <p>कहानियाँ जो दिल से निकली हैं</p>
-  </header>
+<header class="top">
+  <h1>📚 उपन्यास संग्रह</h1>
+  <p>कुछ कहानियाँ पढ़ने के लिए होती हैं,<br>और कुछ खुद को समझने के लिए…</p>
+  <a href="index.html" class="back-btn">⬅ Home</a>
+</header>
 
-  <!-- NOVEL LIST -->
-  <section class="novel-container">
+<section class="novel-grid-wrapper">
 
-    <!-- NOVEL 1 -->
-    <div class="novel-card fade">
+  <!-- Carousel Buttons -->
+  <button class="carousel-btn left" onclick="slideLeft()">‹</button>
+  <button class="carousel-btn right" onclick="slideRight()">›</button>
+
+  <div class="novel-grid">
+
+    <!-- ACTIVE NOVEL -->
+    <div class="novel-card active fade">
+      <div class="tag">📖 Available</div>
+      <img src="images/devnagari-thumbnail.jpg" alt="देवनागरी">
       <h2>देवनागरी</h2>
-      <p class="desc">
-        प्रेम, पीड़ा और आत्मा की भाषा में लिखी गई एक गहरी कहानी।
-      </p>
-      
-      <a href="novel-1/index.html" class="read-btn">📖देवनागरी पढ़ें</a>
+      <p class="hook">यह कहानी आपके फोन से नहीं,<br>आपकी यादों से जुड़ेगी।</p>
+      <p class="desc">प्रेम, पीड़ा और पहचान की कहानी।<br>शब्दों में खुद को ढूंढने वालों के लिए।</p>
+      <a href="novels/novel2/index.html" class="btn">पूरा उपन्यास पढ़ें</a>
     </div>
 
-    <!-- COMING SOON -->
-    <div class="novel-card fade coming">
-      <h2>Coming Soon</h2>
-      <p class="desc">एक नई कहानी जल्द आ रही है…</p>
-      <span class="soon">⏳</span>
+    <!-- COMING SOON NOVELS -->
+    <div class="novel-card coming fade">
+      <div class="tag lock">🔒 Coming Soon</div>
+      <img src="images/ankahi-mohabbat.jpg" alt="अनकही मोहब्बत">
+      <h2>अनकही मोहब्बत</h2>
+      <p class="desc">कुछ रिश्ते पूरे होकर भी अधूरे रह जाते हैं।</p>
     </div>
 
-    <div class="novel-card fade coming">
-      <h2>Coming Soon</h2>
-      <p class="desc">शब्द अभी जन्म ले रहे हैं…</p>
-      <span class="soon">⏳</span>
+    <div class="novel-card coming fade">
+      <div class="tag lock">🔒 Coming Soon</div>
+      <img src="images/ek-khat.jpg" alt="एक ख़त जो भेजा नहीं">
+      <h2>एक ख़त जो भेजा नहीं</h2>
+      <p class="desc">जब शब्द दिल में ही दम तोड़ देते हैं।</p>
     </div>
 
-    <div class="novel-card fade coming">
-      <h2>Coming Soon</h2>
-      <p class="desc">कहानी रास्ते में है…</p>
-      <span class="soon">⏳</span>
+    <div class="novel-card coming fade">
+      <div class="tag lock">🔒 Coming Soon</div>
+      <img src="images/yaadon-ka-ghar.jpg" alt="यादों का घर">
+      <h2>यादों का घर</h2>
+      <p class="desc">जहाँ हर कमरा किसी नाम से जुड़ा है।</p>
     </div>
 
-    <div class="novel-card fade coming">
-      <h2>Coming Soon</h2>
-      <p class="desc">जल्द मिलेंगे इन शब्दों से…</p>
-      <span class="soon">⏳</span>
-    </div>
+  </div>
+</section>
 
-  </section>
+<footer>
+  © 2026 | प्रकाश — शब्द, भावनाएँ और कहानियाँ
+</footer>
 
-  <!-- FOOTER -->
-  <footer class="footer fade">
-    ❤️ अगर मेरी कहानियाँ आपको छू जाएँ  
-    <br><br>
-    <a href="#" class="donate-btn">Support / Donate</a>
-    <p class="author">— Prakash</p>
-  </footer>
+<script>
+  // ===== Carousel Logic =====
+  const grid = document.querySelector('.novel-grid');
+  let scrollAmount = 0;
+  const cardWidth = 285; // approx width + gap
 
-  <script src="home.js"></script>
+  function slideLeft() {
+    scrollAmount -= cardWidth;
+    if(scrollAmount < 0) scrollAmount = 0;
+    grid.style.transform = `translateX(-${scrollAmount}px)`;
+  }
+
+  function slideRight() {
+    const maxScroll = grid.scrollWidth - grid.clientWidth;
+    scrollAmount += cardWidth;
+    if(scrollAmount > maxScroll) scrollAmount = maxScroll;
+    grid.style.transform = `translateX(-${scrollAmount}px)`;
+  }
+</script>
+
 </body>
-      </html>
+</html>
