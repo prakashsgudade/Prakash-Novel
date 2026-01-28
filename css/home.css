@@ -157,3 +157,7 @@ body{
     font-size:32px;
   }
   }
+.fade{
+  opacity:1 !important;
+  transform:none !important;
+}
