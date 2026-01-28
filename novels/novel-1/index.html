@@ -1,84 +1,250 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>देवनागरी | प्रकाश</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>उपन्यास संग्रह | प्रकाश</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../../css/novels.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Hind:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ===== Global Reset ===== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Hind', sans-serif;
+    background: #fdf6f0;
+    color: #222;
+    line-height: 1.6;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* ===== Header ===== */
+  header.top {
+    text-align: center;
+    padding: 50px 20px 30px;
+    background: linear-gradient(to right, #ffb347, #ffcc33);
+    color: #222;
+  }
+
+  header.top h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  header.top p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #d35400;
+    color: #fff;
+    border-radius: 25px;
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .back-btn:hover {
+    transform: scale(1.05);
+    background: #e67e22;
+  }
+
+  /* ===== Novel Grid ===== */
+  .novel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .novel-card {
+    background: #fff6f0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 25px 20px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .novel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  }
+
+  /* ===== Thumbnail Image ===== */
+  .novel-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+  }
+
+  .novel-card img:hover {
+    transform: scale(1.03);
+  }
+
+  .novel-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #d35400;
+  }
+
+  .novel-card .hook {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #555;
+  }
+
+  .novel-card .desc {
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .novel-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #d35400;
+    color: #fff;
+    border-radius: 25px;
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .novel-card .btn:hover {
+    transform: scale(1.05);
+    background: #e67e22;
+  }
+
+  /* ===== Tags ===== */
+  .novel-card .tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: #ff6b6b;
+    color: #fff;
+  }
+
+  .novel-card.coming .tag {
+    background: #999;
+  }
+
+  /* ===== Fade Animation ===== */
+  .fade {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    text-align: center;
+    padding: 25px 20px;
+    background: #222;
+    color: #fff;
+    margin-top: 50px;
+  }
+
+  /* ===== Responsive ===== */
+  @media(max-width: 600px) {
+    header.top h1 {
+      font-size: 2rem;
+    }
+
+    .novel-card h2 {
+      font-size: 1.5rem;
+    }
+
+    .novel-card img {
+      height: 150px;
+    }
+  }
+</style>
 </head>
+
 <body>
 
-  <!-- HERO / COVER -->
-  <header class="novel-hero fade">
-    <img src="../../assets/images/novel-1-cover.jpg" alt="देवनागरी Cover" class="novel-cover">
-    <h1>देवनागरी</h1>
-    <p class="subtitle">
-      यह सिर्फ एक कहानी नहीं,  
-      यह यादों और एहसासों का सफ़र है।
+<header class="top">
+  <h1>📚 उपन्यास संग्रह</h1>
+  <p>कुछ कहानियाँ पढ़ने के लिए होती हैं,<br>और कुछ खुद को समझने के लिए…</p>
+
+  <a href="index.html" class="back-btn">⬅ Home</a>
+</header>
+
+<section class="novel-grid">
+
+  <!-- ACTIVE NOVEL -->
+  <div class="novel-card active fade">
+    <div class="tag">📖 Available</div>
+    <img src="images/devnagari-thumbnail.jpg" alt="देवनागरी">
+    <h2>देवनागरी</h2>
+    <p class="hook">
+      यह कहानी आपके फोन से नहीं,<br>आपकी यादों से जुड़ेगी।
     </p>
-  </header>
-
-  <!-- SYNOPSIS -->
-  <section class="novel-synopsis fade">
-    <h2>📖 सारांश</h2>
-    <p>
-      "देवनागरी" प्रेम, पहचान और जीवन के उन पलों की कहानी है  
-      जो हमारे दिल में हमेशा रहते हैं।  
-      यह कहानी आपको आपके अपने एहसासों से जोड़ देगी,  
-      और शब्दों में जीने का अहसास कराएगी।
+    <p class="desc">
+      प्रेम, पीड़ा और पहचान की कहानी।<br>
+      शब्दों में खुद को ढूंढने वालों के लिए।
     </p>
-  </section>
+    <a href="novels/novel2/index.html" class="btn">पूरा उपन्यास पढ़ें</a>
+  </div>
 
-  <!-- CHAPTERS -->
-  <section class="chapters fade">
-    <h2>📝 अध्याय</h2>
-    <div class="chapter-grid">
+  <!-- COMING SOON NOVELS -->
+  <div class="novel-card coming fade">
+    <div class="tag lock">🔒 Coming Soon</div>
+    <img src="images/ankahi-mohabbat.jpg" alt="अनकही मोहब्बत">
+    <h2>अनकही मोहब्बत</h2>
+    <p class="desc">
+      कुछ रिश्ते पूरे होकर भी अधूरे रह जाते हैं।
+    </p>
+  </div>
 
-      <div class="chapter-card fade">
-        <h3>अध्याय 01</h3>
-        <p>पहली मुलाकात और यादें</p>
-        <a href="chapters/chapter-01/index.html" class="btn">📖 पढ़ें</a>
-      </div>
+  <div class="novel-card coming fade">
+    <div class="tag lock">🔒 Coming Soon</div>
+    <img src="images/ek-khat.jpg" alt="एक ख़त जो भेजा नहीं">
+    <h2>एक ख़त जो भेजा नहीं</h2>
+    <p class="desc">
+      जब शब्द दिल में ही दम तोड़ देते हैं।
+    </p>
+  </div>
 
-      <div class="chapter-card fade">
-        <h3>अध्याय 02</h3>
-        <p>इश्क़ की शुरुआत</p>
-        <a href="chapters/chapter-02/index.html" class="btn">📖 पढ़ें</a>
-      </div>
+  <div class="novel-card coming fade">
+    <div class="tag lock">🔒 Coming Soon</div>
+    <img src="images/yaadon-ka-ghar.jpg" alt="यादों का घर">
+    <h2>यादों का घर</h2>
+    <p class="desc">
+      जहाँ हर कमरा किसी नाम से जुड़ा है।
+    </p>
+  </div>
 
-      <div class="chapter-card fade">
-        <h3>अध्याय 03</h3>
-        <p>दिल के राज़</p>
-        <a href="chapters/chapter-03/index.html" class="btn">📖 पढ़ें</a>
-      </div>
+</section>
 
-      <div class="chapter-card fade epilogue">
-        <h3>अंतिम / Epilogue</h3>
-        <p>यादों का सफ़र</p>
-        <a href="chapters/epilogue/index.html" class="btn">📖 पढ़ें</a>
-      </div>
+<footer>
+  © 2026 | प्रकाश — शब्द, भावनाएँ और कहानियाँ
+</footer>
 
-    </div>
-  </section>
-
-  <!-- SUPPORT -->
-  <section class="support fade">
-    <h2>☕ लेखक को सहयोग दें</h2>
-    <p>आपका छोटा सहयोग भी अगली कहानी की चाय और शब्दों को आगे बढ़ा सकता है।</p>
-    <a href="../../donate/index.html" class="btn">UPI से सहयोग करें</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="fade">
-    © 2026 | शब्द, भावनाएँ और कहानियाँ — प्रकाश
-  </footer>
-
-  <!-- JS -->
-  <script src="../../js/novels.js"></script>
 </body>
-</html>
+  </html>
