@@ -1,1 +1,85 @@
+:root{
+  --bg:#0e0e0e;
+  --box:#111;
+  --text:#e0e0e0;
+  --title:#e6c87a;
+}
 
+body.sepia{
+  --bg:#f4ecd8;
+  --box:#fffaf0;
+  --text:#3b2f2f;
+  --title:#8b6b2e;
+}
+
+body{
+  margin:0;
+  font-family:'Hind', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:0.4s;
+}
+
+.page{
+  max-width:900px;
+  margin:30px auto;
+  background:var(--box);
+  padding:50px 35px;
+  border-radius:18px;
+  box-shadow:0 25px 80px rgba(0,0,0,0.5);
+}
+
+.novel-title{
+  text-align:center;
+  font-family:'Playfair Display', serif;
+  font-size:34px;
+  color:var(--title);
+}
+
+.chapter-title{
+  text-align:center;
+  font-size:18px;
+  opacity:0.8;
+  margin-bottom:35px;
+}
+
+.controls{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-bottom:30px;
+  flex-wrap:wrap;
+}
+
+.controls button{
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  background:var(--title);
+  color:#111;
+  font-size:14px;
+}
+
+.content{
+  font-size:18px;
+  line-height:1.9;
+}
+
+.content p{
+  margin-bottom:22px;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  margin-top:50px;
+}
+
+.nav a{
+  background:var(--title);
+  color:#111;
+  padding:10px 22px;
+  border-radius:25px;
+  text-decoration:none;
+  }
