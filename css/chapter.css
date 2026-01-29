@@ -1,82 +1,57 @@
+/* BODY PAR TEXTURE */
 body{
   margin:0;
   font-family:'Hind', sans-serif;
 
-  /* 🔥 PAPER TEXTURE */
-  background-color:#f4f1ec;
   background-image: url("../assets/images/paper-texture.png");
   background-repeat: repeat;
   background-size: auto;
-
-  color:#2c2c2c;
+  background-color: #f4f1ec;
 }
 
-/* Reader box */
+/* READER – TRANSPARENT */
 .reader{
-  max-width:720px;
-  margin:40px auto;
-  padding:40px 30px;
-  background:rgba(255,255,255,0.85);
-  border-radius:14px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.25);
+  max-width: 720px;
+  margin: auto;
+  padding: 24px;
+  background: rgba(255,255,255,0.85); /* THODA SEE-THROUGH */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 12px;
 }
 
-/* Controls */
+.novel-title{
+  font-family:'Playfair Display', serif;
+  font-size:32px;
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.chapter-title{
+  text-align:center;
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+.content p{
+  font-size:20px;
+  line-height:1.9;
+  margin-bottom:22px;
+}
+
 .controls{
   display:flex;
   justify-content:space-between;
   margin-bottom:20px;
 }
 
-.controls button{
-  padding:6px 12px;
-  border:none;
-  border-radius:8px;
+button{
+  padding:8px 14px;
+  font-size:16px;
   cursor:pointer;
 }
 
-/* Titles */
-.novel-title{
-  font-family:'Playfair Display', serif;
-  font-size:40px;
-  text-align:center;
-}
-
-.chapter-title{
-  text-align:center;
-  font-size:18px;
-  opacity:0.7;
-  margin-bottom:30px;
-}
-
-/* Content */
-.content{
-  font-size:18px;
-  line-height:1.9;
-}
-
-.content p{
-  margin-bottom:18px;
-}
-
-/* Navigation */
 .nav{
   display:flex;
   justify-content:space-between;
   margin-top:40px;
-}
-
-.nav a{
-  text-decoration:none;
-  color:#444;
-}
-
-/* 🌙 Dark mode */
-body.dark{
-  background:#0f0f0f;
-}
-
-body.dark .reader{
-  background:#1b1b1b;
-  color:#eee;
 }
