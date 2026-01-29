@@ -1,26 +1,15 @@
-let isDark = true;
+let size = 18;
 
-function toggleMode() {
-  if(isDark){
-    document.body.classList.remove('dark-mode');
-    document.body.classList.add('sepia-mode');
-  } else {
-    document.body.classList.remove('sepia-mode');
-    document.body.classList.add('dark-mode');
-  }
-  isDark = !isDark;
+function increaseFont(){
+  size += 1;
+  document.querySelector('.content').style.fontSize = size + "px";
 }
 
-function increaseFont() {
-  let content = document.querySelector('.content');
-  let style = window.getComputedStyle(content, null).getPropertyValue('font-size');
-  let currentSize = parseFloat(style);
-  content.style.fontSize = (currentSize + 2) + 'px';
+function decreaseFont(){
+  size -= 1;
+  document.querySelector('.content').style.fontSize = size + "px";
 }
 
-function decreaseFont() {
-  let content = document.querySelector('.content');
-  let style = window.getComputedStyle(content, null).getPropertyValue('font-size');
-  let currentSize = parseFloat(style);
-  content.style.fontSize = (currentSize - 2) + 'px';
+function toggleMode(){
+  document.body.classList.toggle("dark");
 }
