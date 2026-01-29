@@ -1,20 +1,15 @@
-let size = 18;
-const content = document.querySelector(".content");
+let fontSize = 18;
 
-function fontPlus(){
-  size++;
-  content.style.fontSize = size + "px";
+function toggleMode(){
+  document.body.classList.toggle("sepia");
 }
 
-function fontMinus(){
-  size--;
-  content.style.fontSize = size + "px";
+function increaseFont(){
+  fontSize++;
+  document.querySelector(".content").style.fontSize = fontSize + "px";
 }
 
-function darkMode(){
-  document.body.classList.remove("sepia");
-}
-
-function sepiaMode(){
-  document.body.classList.add("sepia");
+function decreaseFont(){
+  fontSize--;
+  document.querySelector(".content").style.fontSize = fontSize + "px";
 }
