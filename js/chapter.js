@@ -1,13 +1,15 @@
-let size = 18;
+let fontSize = 20;
 
 function increaseFont(){
-  size += 1;
-  document.querySelector('.content').style.fontSize = size + "px";
+  fontSize += 2;
+  document.querySelectorAll('.content p')
+    .forEach(p => p.style.fontSize = fontSize + 'px');
 }
 
 function decreaseFont(){
-  size -= 1;
-  document.querySelector('.content').style.fontSize = size + "px";
+  fontSize -= 2;
+  document.querySelectorAll('.content p')
+    .forEach(p => p.style.fontSize = fontSize + 'px');
 }
 
 function toggleMode(){
