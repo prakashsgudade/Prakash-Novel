@@ -1,57 +1,18 @@
-/* BODY PAR TEXTURE */
 body{
   margin:0;
   font-family:'Hind', sans-serif;
 
+  background-color:#f4f1ec;
   background-image: url("/assets/images/paper-texture.png");
   background-repeat: repeat;
   background-size: auto;
-  background-color: #f4f1ec;
 }
 
-/* READER – TRANSPARENT */
+/* reader transparent rakho */
 .reader{
-  max-width: 720px;
-  margin: auto;
-  padding: 24px;
-  background: rgba(255,255,255,0.85); /* THODA SEE-THROUGH */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  border-radius: 12px;
-}
-
-.novel-title{
-  font-family:'Playfair Display', serif;
-  font-size:32px;
-  text-align:center;
-  margin-bottom:10px;
-}
-
-.chapter-title{
-  text-align:center;
-  font-size:20px;
-  margin-bottom:30px;
-}
-
-.content p{
-  font-size:20px;
-  line-height:1.9;
-  margin-bottom:22px;
-}
-
-.controls{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:20px;
-}
-
-button{
-  padding:8px 14px;
-  font-size:16px;
-  cursor:pointer;
-}
-
-.nav{
-  display:flex;
-  justify-content:space-between;
-  margin-top:40px;
+  max-width:720px;
+  margin:20px auto;
+  padding:24px;
+  background: rgba(255,255,255,0.88);
+  border-radius:12px;
 }
