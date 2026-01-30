@@ -1,4 +1,3 @@
-// Reserved for future features
-// (dark mode, font control, progress bar)
-
-console.log("Reader loaded");
+function toggleDark(){
+  document.body.classList.toggle("dark");
+}
