@@ -1,126 +1,112 @@
-body {
+:root{
+  --bg:#1a1a1a;
+  --paper:#222;
+  --text:#f2f2f2;
+  --accent:#e6c87a;
+}
+
+body{
   margin:0;
   font-family:'Hind', sans-serif;
-  background:#111 url('../assets/images/paper-texture.png') repeat;
-  color:#f5f5f5;
-  counter-reset: page;
-}
-
-.reader {
-  max-width:900px;
-  margin:40px auto;
-  padding:40px;
-}
-
-.novel-title {
-  text-align:center;
-  font-family:'Playfair Display', serif;
-  font-size:36px;
-  color:#e6c87a;
-  margin-bottom:10px;
-}
-
-.chapter-title {
-  text-align:center;
-  font-size:22px;
-  color:#fff;
-  margin-bottom:30px;
-}
-
-.content .page {
-  background: rgba(0,0,0,0.3);
-  padding:25px 30px;
-  border-radius:15px;
-  margin-bottom:20px;
-  position:relative;
-}
-
-.page::after {
-  counter-increment: page;
-  content: "Page " counter(page);
-  position:absolute;
-  bottom:10px;
-  right:20px;
-  font-size:14px;
-  color:#f2d98c;
-}
-
-.controls {
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:25px;
-}
-
-.controls button {
-  background:#e6c87a;
-  border:none;
-  padding:8px 16px;
-  border-radius:25px;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.controls button:hover {
-  background:#f2d98c;
-}
-
-.font-control button {
-  margin-left:5px;
-}
-
-.nav {
-  display:flex;
-  justify-content:space-between;
-  margin-top:30px;
-}
-
-.nav-btn {
-  text-decoration:none;
-  color:#111;
-  background:#e6c87a;
-  padding:12px 22px;
-  border-radius:25px;
-  font-size:14px;
-  transition:0.3s;
-}
-
-.nav-btn:hover {
-  background:#f2d98c;
-  transform:scale(1.05);
-}
-
-.donate-btn {
-  position:fixed;
-  bottom:30px;
-  right:30px;
-  background:#e6c87a;
-  color:#111;
-  padding:15px;
-  border-radius:50%;
-  font-size:20px;
-  text-decoration:none;
-  box-shadow:0 8px 25px rgba(0,0,0,0.6);
-  transition:0.3s;
-}
-
-.donate-btn:hover {
-  transform:scale(1.1);
-  background:#f2d98c;
+  background: var(--bg) url("../assets/images/paper-texture.png") repeat;
+  color:var(--text);
 }
 
 /* DARK MODE */
-body.dark-mode {
-  background:#1a1a1a url('../assets/images/paper-texture.png') repeat;
-  color:#f2f2f2;
+body.light{
+  --bg:#f4f1ec;
+  --paper:#ffffff;
+  --text:#222;
 }
 
-body.dark-mode .page {
-  background:rgba(255,255,255,0.05);
+.reader{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
 }
 
-body.dark-mode .nav-btn,
-body.dark-mode .controls button,
-body.dark-mode .donate-btn {
-  background:#f2d98c;
+.top-bar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.top-bar button{
+  background:var(--accent);
+  border:none;
+  padding:8px 14px;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+.page-count{
+  font-size:14px;
+  opacity:0.8;
+}
+
+.book{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+}
+
+.page{
+  background:var(--paper);
+  padding:45px;
+  border-radius:18px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.6);
+}
+
+.page h1{
+  text-align:center;
+  font-family:'Playfair Display', serif;
+  color:var(--accent);
+  margin-bottom:10px;
+}
+
+.page h2{
+  text-align:center;
+  font-size:18px;
+  opacity:0.8;
+  margin-bottom:30px;
+}
+
+.page p{
+  font-size:18px;
+  line-height:1.9;
+  margin-bottom:20px;
+  text-align:justify;
+}
+
+.nav-buttons{
+  display:flex;
+  justify-content:space-between;
+  margin:40px 0;
+}
+
+.nav-buttons a{
+  background:var(--accent);
   color:#111;
+  padding:12px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:500;
 }
+
+.donate{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#ff4d6d;
+  color:#fff;
+  width:55px;
+  height:55px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-size:22px;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
+  }
