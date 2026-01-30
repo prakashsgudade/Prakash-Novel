@@ -1,92 +1,135 @@
+:root{
+  --bg-light:#fff6ec;
+  --bg-dark:#121212;
+  --card-light:#ffffff;
+  --card-dark:#1e1e1e;
+  --text-light:#2b2b2b;
+  --text-dark:#eaeaea;
+  --accent:#d46a00;
+}
+
 *{
-  margin:0;
-  padding:0;
   box-sizing:border-box;
 }
 
 body{
-  font-family:'Hind', sans-serif;
-  background:#0e0e0e;
-  color:#eaeaea;
+  margin:0;
+  font-family:"Noto Serif Devanagari","Mangal",serif;
+  background:var(--bg-light);
+  color:var(--text-light);
+  line-height:2;
+  transition:0.3s;
 }
 
+body.dark{
+  background:var(--bg-dark);
+  color:var(--text-dark);
+}
+
+/* HEADER */
+.header{
+  position:sticky;
+  top:0;
+  background:var(--bg-light);
+  padding:16px;
+  text-align:center;
+  font-size:28px;
+  font-weight:700;
+  z-index:10;
+}
+
+body.dark .header{
+  background:var(--bg-dark);
+}
+
+/* DARK BUTTON */
+.dark-btn{
+  position:absolute;
+  right:16px;
+  top:14px;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:8px 16px;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+/* READER */
 .reader{
-  max-width:900px;
-  margin:40px auto 80px;
-  padding:20px;
+  max-width:720px;
+  margin:auto;
+  padding:30px 16px 140px;
 }
 
-.novel-title{
-  text-align:center;
-  font-family:'Playfair Display', serif;
-  font-size:36px;
-  color:#e6c87a;
-  margin-bottom:6px;
-}
-
-.chapter-title{
-  text-align:center;
-  font-size:18px;
-  color:#aaa;
-  margin-bottom:40px;
-}
-
-/* EACH PAGE */
 .page{
-  background:#111;
-  padding:45px 35px;
+  background:var(--card-light);
+  padding:28px;
+  margin-bottom:50px;
   border-radius:18px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.6);
-  margin-bottom:40px;
-  font-size:19px;
-  line-height:1.9;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  position:relative;
+}
+
+body.dark .page{
+  background:var(--card-dark);
 }
 
 .page p{
+  font-size:18px;
   margin-bottom:20px;
   text-align:justify;
 }
 
-/* NAV BUTTONS */
-.nav-buttons{
+.page-number{
+  position:absolute;
+  bottom:-26px;
+  right:10px;
+  font-size:14px;
+  opacity:0.6;
+}
+
+/* NAV BAR */
+.nav{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:var(--card-light);
+  padding:12px;
   display:flex;
-  justify-content:space-between;
-  margin-top:60px;
+  gap:12px;
+  justify-content:space-around;
+  box-shadow:0 -6px 18px rgba(0,0,0,0.15);
 }
 
-.nav-btn{
+body.dark .nav{
+  background:var(--card-dark);
+}
+
+.nav a{
+  flex:1;
+  text-align:center;
   text-decoration:none;
-  padding:16px 28px;
-  border-radius:30px;
-  background:#2b2b2b;
+  background:var(--accent);
   color:#fff;
-  font-size:15px;
-  transition:0.3s;
-}
-
-.nav-btn:hover{
-  transform:scale(1.05);
-  background:#3a3a3a;
-}
-
-.nav-btn.primary{
-  background:#e6c87a;
-  color:#111;
+  padding:14px 0;
+  border-radius:30px;
   font-weight:600;
 }
 
-.nav-btn.primary:hover{
-  background:#f2d98c;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-  .page{
-    padding:30px 22px;
-    font-size:17px;
+/* DONATE */
+.donate{
+  position:fixed;
+  right:16px;
+  bottom:90px;
+  width:56px;
+  height:56px;
+  background:#ff4d6d;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
   }
-  .nav-buttons{
-    flex-direction:column;
-    gap:18px;
-  }
-}
