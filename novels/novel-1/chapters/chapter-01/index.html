@@ -1,127 +1,193 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <title>देवनागरी | अध्याय 01</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>देवनागरी | अध्याय 01</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Hind:wght@400;500&display=swap" rel="stylesheet">
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Hind:wght@400;500&display=swap" rel="stylesheet">
 
-  <style>
-    body{
-      margin:0;
-      font-family:'Hind', sans-serif;
-      background:#0e0e0e;
-      color:#f5f5f5;
-    }
+<style>
+:root{
+  --bg:#0e0e0e;
+  --page:#111;
+  --text:#e0e0e0;
+  --title:#e6c87a;
+}
 
-    .page{
-      max-width:900px;
-      margin:40px auto;
-      background:#111;
-      padding:50px 35px;
-      border-radius:18px;
-      box-shadow:0 25px 80px rgba(0,0,0,0.7);
-    }
+body{
+  margin:0;
+  font-family:'Hind', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:0.4s;
+}
 
-    .novel-title{
-      text-align:center;
-      font-family:'Playfair Display', serif;
-      font-size:34px;
-      color:#e6c87a;
-      margin-bottom:10px;
-    }
+/* READER */
+.reader{
+  max-width:900px;
+  margin:40px auto 80px;
+  padding:20px;
+}
 
-    .chapter-title{
-      text-align:center;
-      font-size:20px;
-      color:#bbb;
-      margin-bottom:40px;
-    }
+/* TITLES */
+.novel-title{
+  text-align:center;
+  font-family:'Playfair Display', serif;
+  font-size:36px;
+  color:var(--title);
+  margin-bottom:6px;
+}
 
-    .content{
-      font-size:18px;
-      line-height:1.9;
-      color:#e0e0e0;
-      text-align:justify;
-    }
+.chapter-title{
+  text-align:center;
+  font-size:18px;
+  color:#aaa;
+  margin-bottom:50px;
+}
 
-    .content p{
-      margin-bottom:22px;
-    }
+/* PAGE BLOCKS */
+.page{
+  background:var(--page);
+  padding:48px 36px;
+  border-radius:18px;
+  box-shadow:0 25px 80px rgba(0,0,0,0.7);
+  margin-bottom:45px;
+  font-size:19px;
+  line-height:1.95;
+}
 
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      margin-top:50px;
-    }
+.page p{
+  margin-bottom:22px;
+  text-align:justify;
+}
 
-    .nav a{
-      text-decoration:none;
-      color:#111;
-      background:#e6c87a;
-      padding:12px 22px;
-      border-radius:25px;
-      font-size:14px;
-      transition:0.3s;
-    }
+/* NAV BUTTONS */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  margin-top:60px;
+}
 
-    .nav a:hover{
-      transform:scale(1.05);
-      background:#f2d98c;
-    }
+.nav a{
+  text-decoration:none;
+  color:#111;
+  background:#e6c87a;
+  padding:14px 26px;
+  border-radius:30px;
+  font-size:15px;
+  transition:0.3s;
+}
 
-    @media(max-width:600px){
-      .page{
-        padding:35px 22px;
-      }
-      .content{
-        font-size:17px;
-      }
-    }
-  </style>
+.nav a:hover{
+  transform:scale(1.06);
+  background:#f2d98c;
+}
+
+/* CONTROLS */
+.controls{
+  position:fixed;
+  top:15px;
+  right:15px;
+}
+
+.controls button{
+  background:#e6c87a;
+  border:none;
+  padding:10px 14px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:16px;
+}
+
+/* SEPIA MODE */
+body.sepia{
+  --bg:#1a160f;
+  --page:#221c12;
+  --text:#f1ead7;
+  --title:#d8b66a;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .page{
+    padding:34px 22px;
+    font-size:17px;
+  }
+  .nav{
+    flex-direction:column;
+    gap:18px;
+  }
+}
+</style>
 </head>
 
 <body>
 
+<div class="controls">
+  <button onclick="toggleMode()">🌙 / 📜</button>
+</div>
+
+<div class="reader">
+
+  <div class="novel-title">देवनागरी</div>
+  <div class="chapter-title">अध्याय 01 — शुरुआत</div>
+
+  <!-- PAGE 1 -->
   <div class="page">
-
-    <div class="novel-title">देवनागरी</div>
-    <div class="chapter-title">अध्याय 01 — शुरुआत</div>
-
-    <div class="content">
-      <p>
-        कुछ कहानियाँ शब्दों से नहीं,  
-        खामोशियों से शुरू होती हैं।
-      </p>
-
-      <p>
-        उस दिन भी ऐसा ही था।  
-        हवा में एक अजीब-सी उदासी तैर रही थी,  
-        जैसे किसी ने अपने दिल की बात  
-        अधूरी छोड़ दी हो।
-      </p>
-
-      <p>
-        मैंने उसे देखा —  
-        भीड़ में अकेली,  
-        और अकेलेपन में भी पूरी।
-      </p>
-
-      <p>
-        शायद यही मोहब्बत की भाषा होती है…  
-        जो समझ में कम  
-        और महसूस ज़्यादा होती है।
-      </p>
-    </div>
-
-    <div class="nav">
-      <a href="../../index.html">← Novel Page</a>
-      <a href="../chapter-02/index.html">Next Chapter →</a>
-    </div>
-
+    <p>कुछ कहानियाँ शब्दों से नहीं, खामोशियों से शुरू होती हैं।</p>
+    <p>जैसे किसी ने दिल में बहुत कुछ कह लिया हो, पर आवाज़ को वहीं रोक दिया हो।</p>
   </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <p>उस दिन हवा कुछ ज़्यादा ही ठहरी हुई थी।</p>
+    <p>ना आगे बढ़ रही थी, ना पीछे लौट रही थी — बस महसूस हो रही थी।</p>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="page">
+    <p>वो सामने खड़ी थी।</p>
+    <p>भीड़ में अकेली, और अकेलेपन में भी पूरी।</p>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div class="page">
+    <p>उसकी आँखों में सवाल थे,</p>
+    <p>और मेरे पास सिर्फ़ एक अधूरी समझ।</p>
+  </div>
+
+  <!-- PAGE 5 -->
+  <div class="page">
+    <p>कुछ रिश्ते शब्द नहीं माँगते।</p>
+    <p>वो बस महसूस किए जाते हैं, निभाए नहीं जाते।</p>
+  </div>
+
+  <!-- PAGE 6 -->
+  <div class="page">
+    <p>शायद यही देवनागरी थी।</p>
+    <p>एक भाषा, जो लिखी कम और जी ज़्यादा जाती है।</p>
+  </div>
+
+  <!-- PAGE 7 -->
+  <div class="page">
+    <p>और इसी खामोशी से,</p>
+    <p>एक कहानी ने जन्म लिया…</p>
+  </div>
+
+  <div class="nav">
+    <a href="../../index.html">← Novel Page</a>
+    <a href="../chapter-02/index.html">Next Chapter →</a>
+  </div>
+
+</div>
+
+<script>
+function toggleMode(){
+  document.body.classList.toggle("sepia");
+}
+</script>
 
 </body>
 </html>
