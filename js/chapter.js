@@ -1,17 +1,18 @@
-let fontSize = 20;
+// Page fade-in effect
+const pages = document.querySelectorAll('.page');
 
-function increaseFont(){
-  fontSize += 2;
-  document.querySelectorAll('.content p')
-    .forEach(p => p.style.fontSize = fontSize + 'px');
-}
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+},{threshold:0.3});
 
-function decreaseFont(){
-  fontSize -= 2;
-  document.querySelectorAll('.content p')
-    .forEach(p => p.style.fontSize = fontSize + 'px');
-}
-
-function toggleMode(){
-  document.body.classList.toggle("dark");
-}
+pages.forEach(p => {
+  p.style.opacity = 0;
+  p.style.transform = 'translateY(30px)';
+  p.style.transition = '0.8s ease';
+  observer.observe(p);
+});
