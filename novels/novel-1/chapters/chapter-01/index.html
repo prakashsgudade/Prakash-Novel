@@ -1,68 +1,83 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<title>देवनागरी | अध्याय 01</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>देवनागरी | अध्याय 01</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- GOOGLE FONTS -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Hind:wght@400;500&display=swap" rel="stylesheet">
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Hind:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- CHAPTER CSS -->
-<link rel="stylesheet" href="../../../css/chapter.css">
+  <!-- CHAPTER CSS -->
+  <link rel="stylesheet" href="../../../css/chapter.css">
 </head>
 
 <body>
 
 <div class="reader">
 
-  <!-- CONTROLS -->
-  <div class="controls">
-    <button class="toggle-btn" onclick="toggleMode()">🌙 / 📜</button>
-    <div class="font-control">
-      <button onclick="decreaseFont()">A−</button>
-      <button onclick="increaseFont()">A+</button>
+  <!-- TOP CONTROLS -->
+  <div class="top-bar">
+    <button onclick="toggleTheme()">🌙</button>
+    <div class="page-count">
+      Page <span id="pageNum">1</span> / <span id="totalPages">7</span>
     </div>
   </div>
 
-  <!-- NOVEL TITLE -->
-  <div class="novel-title">देवनागरी</div>
-  <div class="chapter-title">अध्याय 01 — शुरुआत</div>
+  <!-- BOOK -->
+  <div class="book">
 
-  <!-- SCROLLING CONTENT -->
-  <div class="content">
     <div class="page">
+      <h1>देवनागरी</h1>
+      <h2>अध्याय 01 — शुरुआत</h2>
+
       <p>कुछ कहानियाँ शब्दों से नहीं, खामोशियों से शुरू होती हैं।</p>
+      <p>उस दिन हवा भी ठहरी हुई थी, जैसे समय ने साँस रोक ली हो।</p>
     </div>
+
     <div class="page">
-      <p>उस दिन हवा में एक अजीब-सी ठहराव था, जैसे समय भी कुछ कहना चाहता हो।</p>
+      <p>मैंने उसे देखा — भीड़ में अकेली, और अकेलेपन में भी पूरी।</p>
+      <p>उसकी आँखों में सवाल थे, और मेरे पास जवाब नहीं।</p>
     </div>
-    <div class="page">
-      <p>वो सामने थी — भीड़ में अकेली, और अकेलेपन में भी पूरी।</p>
-    </div>
-    <div class="page">
-      <p>उसकी आँखों में सवाल थे, और मेरे पास जवाब नहीं थे।</p>
-    </div>
+
     <div class="page">
       <p>कुछ रिश्ते आवाज़ नहीं चाहते, बस एहसास बनकर रह जाते हैं।</p>
+      <p>शायद यही मोहब्बत की असली भाषा होती है।</p>
     </div>
+
     <div class="page">
-      <p>और शायद यही देवनागरी की पहली पंक्ति थी…</p>
+      <p>वक़्त गुजरता गया, पर वो पल वहीं ठहरा रहा।</p>
+      <p>जैसे किसी किताब का पसंदीदा पन्ना।</p>
     </div>
+
+    <div class="page">
+      <p>हर कहानी का एक मोड़ होता है।</p>
+      <p>और यही देवनागरी की पहली करवट थी।</p>
+    </div>
+
+    <div class="page">
+      <p>शब्द कम थे, पर असर गहरा।</p>
+      <p>कहानी शुरू हो चुकी थी।</p>
+    </div>
+
+    <div class="page">
+      <p><strong>— अध्याय 01 समाप्त</strong></p>
+    </div>
+
   </div>
 
-  <!-- NAVIGATION -->
-  <div class="nav">
-    <a href="../../index.html" class="nav-btn">← Novel Page</a>
-    <a href="../chapter-02/index.html" class="nav-btn">Next Chapter →</a>
+  <!-- NAV BUTTONS -->
+  <div class="nav-buttons">
+    <a href="../../../index.html">🏠 Home</a>
+    <a href="../chapter-02/index.html">➡ Next</a>
   </div>
-
-  <!-- FLOATING DONATE -->
-  <a href="../../../donate/index.html" class="donate-btn">❤️ Support</a>
 
 </div>
 
-<!-- CHAPTER JS -->
+<!-- DONATE BUTTON -->
+<a href="../../../donate" class="donate">❤️</a>
+
+<!-- JS -->
 <script src="../../../js/chapter.js"></script>
 </body>
-                                               </html>
+</html>
