@@ -1,17 +1,18 @@
-body{
+body {
   margin:0;
   font-family:'Hind', sans-serif;
   background:#111 url('../assets/images/paper-texture.png') repeat;
   color:#f5f5f5;
+  counter-reset: page;
 }
 
-.reader{
+.reader {
   max-width:900px;
   margin:40px auto;
   padding:40px;
 }
 
-.novel-title{
+.novel-title {
   text-align:center;
   font-family:'Playfair Display', serif;
   font-size:36px;
@@ -19,28 +20,24 @@ body{
   margin-bottom:10px;
 }
 
-.chapter-title{
+.chapter-title {
   text-align:center;
   font-size:22px;
   color:#fff;
   margin-bottom:30px;
 }
 
-.content{
-  margin-top:30px;
-}
-
-.page{
-  background:rgba(0,0,0,0.4);
+.content .page {
+  background: rgba(0,0,0,0.3);
   padding:25px 30px;
   border-radius:15px;
   margin-bottom:20px;
   position:relative;
 }
 
-.page::after{
-  content: counter(page);
+.page::after {
   counter-increment: page;
+  content: "Page " counter(page);
   position:absolute;
   bottom:10px;
   right:20px;
@@ -48,13 +45,13 @@ body{
   color:#f2d98c;
 }
 
-.controls{
+.controls {
   display:flex;
   justify-content:space-between;
   margin-bottom:25px;
 }
 
-.controls button{
+.controls button {
   background:#e6c87a;
   border:none;
   padding:8px 16px;
@@ -63,21 +60,21 @@ body{
   transition:0.3s;
 }
 
-.controls button:hover{
+.controls button:hover {
   background:#f2d98c;
 }
 
-.font-control button{
+.font-control button {
   margin-left:5px;
 }
 
-.nav{
+.nav {
   display:flex;
   justify-content:space-between;
   margin-top:30px;
 }
 
-.nav-btn{
+.nav-btn {
   text-decoration:none;
   color:#111;
   background:#e6c87a;
@@ -87,18 +84,18 @@ body{
   transition:0.3s;
 }
 
-.nav-btn:hover{
+.nav-btn:hover {
   background:#f2d98c;
   transform:scale(1.05);
 }
 
-.donate-btn{
+.donate-btn {
   position:fixed;
   bottom:30px;
   right:30px;
   background:#e6c87a;
   color:#111;
-  padding:15px 18px;
+  padding:15px;
   border-radius:50%;
   font-size:20px;
   text-decoration:none;
@@ -106,22 +103,24 @@ body{
   transition:0.3s;
 }
 
-.donate-btn:hover{
+.donate-btn:hover {
   transform:scale(1.1);
   background:#f2d98c;
 }
 
 /* DARK MODE */
-body.dark-mode{
+body.dark-mode {
   background:#1a1a1a url('../assets/images/paper-texture.png') repeat;
   color:#f2f2f2;
 }
 
-body.dark-mode .page{
+body.dark-mode .page {
   background:rgba(255,255,255,0.05);
 }
 
-body.dark-mode .nav-btn, body.dark-mode .controls button, body.dark-mode .donate-btn{
+body.dark-mode .nav-btn,
+body.dark-mode .controls button,
+body.dark-mode .donate-btn {
   background:#f2d98c;
   color:#111;
-}
+  }
