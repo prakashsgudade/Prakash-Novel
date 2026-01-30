@@ -1,22 +1,68 @@
 body{
   margin:0;
   font-family:'Hind', sans-serif;
-
-  background-color:#f4f1ec;
-  body{
-  background: red url("/assets/images/paper-texture.png") repeat;
-}
-  background-repeat: repeat;
-  background-size: auto;
+  background:#0b0b0b;
+  color:#eee;
+  scroll-behavior:smooth;
 }
 
-/* reader transparent rakho */
-.reader{
-  max-width:720px;
-  margin:20px auto;
-  padding:24px;
-  background: rgba(255,255,255,0.88);
-  border-radius:12px;
+/* HEADER */
+.chapter-header{
+  text-align:center;
+  padding:60px 20px;
 }
 
+.chapter-header h1{
+  font-size:42px;
+  color:#f5d88a;
+}
 
+.chapter-title{
+  font-size:18px;
+  opacity:0.8;
+}
+
+/* CONTAINER */
+.chapter-container{
+  max-width:750px;
+  margin:auto;
+  padding:20px;
+}
+
+/* PAGE FEEL */
+.page{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:22px;
+  line-height:1.8;
+  padding:40px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+/* FLOATING HEART */
+.floating-heart{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:crimson;
+  color:white;
+  font-size:28px;
+  width:65px;
+  height:65px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  text-decoration:none;
+  box-shadow:0 0 20px rgba(220,20,60,0.7);
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.15);}
+  100%{transform:scale(1);}
+}
