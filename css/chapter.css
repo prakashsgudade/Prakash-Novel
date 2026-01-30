@@ -1,68 +1,92 @@
-body{
+*{
   margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
   font-family:'Hind', sans-serif;
-  background:#0b0b0b;
-  color:#eee;
-  scroll-behavior:smooth;
+  background:#0e0e0e;
+  color:#eaeaea;
 }
 
-/* HEADER */
-.chapter-header{
-  text-align:center;
-  padding:60px 20px;
-}
-
-.chapter-header h1{
-  font-size:42px;
-  color:#f5d88a;
-}
-
-.chapter-title{
-  font-size:18px;
-  opacity:0.8;
-}
-
-/* CONTAINER */
-.chapter-container{
-  max-width:750px;
-  margin:auto;
+.reader{
+  max-width:900px;
+  margin:40px auto 80px;
   padding:20px;
 }
 
-/* PAGE FEEL */
-.page{
-  min-height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.novel-title{
   text-align:center;
-  font-size:22px;
-  line-height:1.8;
-  padding:40px;
-  border-bottom:1px solid rgba(255,255,255,0.05);
+  font-family:'Playfair Display', serif;
+  font-size:36px;
+  color:#e6c87a;
+  margin-bottom:6px;
 }
 
-/* FLOATING HEART */
-.floating-heart{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  background:crimson;
-  color:white;
-  font-size:28px;
-  width:65px;
-  height:65px;
+.chapter-title{
+  text-align:center;
+  font-size:18px;
+  color:#aaa;
+  margin-bottom:40px;
+}
+
+/* EACH PAGE */
+.page{
+  background:#111;
+  padding:45px 35px;
+  border-radius:18px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+  margin-bottom:40px;
+  font-size:19px;
+  line-height:1.9;
+}
+
+.page p{
+  margin-bottom:20px;
+  text-align:justify;
+}
+
+/* NAV BUTTONS */
+.nav-buttons{
   display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  text-decoration:none;
-  box-shadow:0 0 20px rgba(220,20,60,0.7);
-  animation:pulse 1.5s infinite;
+  justify-content:space-between;
+  margin-top:60px;
 }
 
-@keyframes pulse{
-  0%{transform:scale(1);}
-  50%{transform:scale(1.15);}
-  100%{transform:scale(1);}
+.nav-btn{
+  text-decoration:none;
+  padding:16px 28px;
+  border-radius:30px;
+  background:#2b2b2b;
+  color:#fff;
+  font-size:15px;
+  transition:0.3s;
+}
+
+.nav-btn:hover{
+  transform:scale(1.05);
+  background:#3a3a3a;
+}
+
+.nav-btn.primary{
+  background:#e6c87a;
+  color:#111;
+  font-weight:600;
+}
+
+.nav-btn.primary:hover{
+  background:#f2d98c;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .page{
+    padding:30px 22px;
+    font-size:17px;
+  }
+  .nav-buttons{
+    flex-direction:column;
+    gap:18px;
+  }
 }
