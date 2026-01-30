@@ -2,190 +2,183 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<title>देवनागरी | अध्याय 01</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- GOOGLE FONTS -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Hind:wght@400;500&display=swap" rel="stylesheet">
+<title>देवनागरी – अध्याय 1</title>
 
 <style>
-:root{
-  --bg:#0e0e0e;
-  --page:#111;
-  --text:#e0e0e0;
-  --title:#e6c87a;
+:root {
+  --bg-light: #fff6ec;
+  --bg-dark: #121212;
+  --card-light: #ffffff;
+  --card-dark: #1e1e1e;
+  --text-light: #2c2c2c;
+  --text-dark: #eaeaea;
+  --accent: #d46a00;
 }
 
-body{
-  margin:0;
-  font-family:'Hind', sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  transition:0.4s;
+body {
+  margin: 0;
+  font-family: "Noto Serif Devanagari", "Mangal", "Kalimati", serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  line-height: 2;
+  transition: 0.3s;
 }
 
-/* READER */
-.reader{
-  max-width:900px;
-  margin:40px auto 80px;
-  padding:20px;
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
 }
 
-/* TITLES */
-.novel-title{
-  text-align:center;
-  font-family:'Playfair Display', serif;
-  font-size:36px;
-  color:var(--title);
-  margin-bottom:6px;
+.reader {
+  max-width: 720px;
+  margin: auto;
+  padding: 40px 20px 160px;
 }
 
-.chapter-title{
-  text-align:center;
-  font-size:18px;
-  color:#aaa;
-  margin-bottom:50px;
+.title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
-/* PAGE BLOCKS */
-.page{
-  background:var(--page);
-  padding:48px 36px;
-  border-radius:18px;
-  box-shadow:0 25px 80px rgba(0,0,0,0.7);
-  margin-bottom:45px;
-  font-size:19px;
-  line-height:1.95;
+.page {
+  background: var(--card-light);
+  padding: 28px;
+  margin-bottom: 50px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  transition: 0.3s;
 }
 
-.page p{
-  margin-bottom:22px;
-  text-align:justify;
+body.dark .page {
+  background: var(--card-dark);
 }
 
-/* NAV BUTTONS */
-.nav{
-  display:flex;
-  justify-content:space-between;
-  margin-top:60px;
+.page-number {
+  position: absolute;
+  bottom: -28px;
+  right: 10px;
+  font-size: 14px;
+  opacity: 0.6;
 }
 
-.nav a{
-  text-decoration:none;
-  color:#111;
-  background:#e6c87a;
-  padding:14px 26px;
-  border-radius:30px;
-  font-size:15px;
-  transition:0.3s;
+.page p {
+  font-size: 18px;
+  margin-bottom: 18px;
+  text-align: justify;
 }
 
-.nav a:hover{
-  transform:scale(1.06);
-  background:#f2d98c;
+/* NAV BAR */
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--card-light);
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: space-around;
+  padding: 14px;
 }
 
-/* CONTROLS */
-.controls{
-  position:fixed;
-  top:15px;
-  right:15px;
+body.dark .nav {
+  background: var(--card-dark);
 }
 
-.controls button{
-  background:#e6c87a;
-  border:none;
-  padding:10px 14px;
-  border-radius:50%;
-  cursor:pointer;
-  font-size:16px;
+.nav a {
+  text-decoration: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-weight: bold;
 }
 
-/* SEPIA MODE */
-body.sepia{
-  --bg:#1a160f;
-  --page:#221c12;
-  --text:#f1ead7;
-  --title:#d8b66a;
+/* DARK MODE */
+.toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-/* MOBILE */
-@media(max-width:600px){
-  .page{
-    padding:34px 22px;
-    font-size:17px;
-  }
-  .nav{
-    flex-direction:column;
-    gap:18px;
-  }
+/* FLOATING DONATE */
+.donate {
+  position: fixed;
+  bottom: 90px;
+  right: 16px;
+  background: #ff4d6d;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<div class="controls">
-  <button onclick="toggleMode()">🌙 / 📜</button>
-</div>
+<div class="toggle" onclick="toggleDark()">🌙 Dark</div>
 
 <div class="reader">
+  <div class="title">अध्याय 1 – एक अधूरी शुरुआत</div>
 
-  <div class="novel-title">देवनागरी</div>
-  <div class="chapter-title">अध्याय 01 — शुरुआत</div>
-
-  <!-- PAGE 1 -->
   <div class="page">
-    <p>कुछ कहानियाँ शब्दों से नहीं, खामोशियों से शुरू होती हैं।</p>
-    <p>जैसे किसी ने दिल में बहुत कुछ कह लिया हो, पर आवाज़ को वहीं रोक दिया हो।</p>
+    <p>उस सुबह हवा कुछ ज़्यादा ही ठहरी हुई थी। जैसे समय ने अपने कदम रोक लिए हों।</p>
+    <p>रास्ता वही था, लेकिन चलने वाला इंसान बदल चुका था।</p>
+    <div class="page-number">Page 1</div>
   </div>
 
-  <!-- PAGE 2 -->
   <div class="page">
-    <p>उस दिन हवा कुछ ज़्यादा ही ठहरी हुई थी।</p>
-    <p>ना आगे बढ़ रही थी, ना पीछे लौट रही थी — बस महसूस हो रही थी।</p>
+    <p>कुछ कहानियाँ पढ़ी नहीं जातीं, जी जाती हैं।</p>
+    <p>और कुछ यादें… कभी पूरी नहीं होतीं।</p>
+    <div class="page-number">Page 2</div>
   </div>
 
-  <!-- PAGE 3 -->
   <div class="page">
-    <p>वो सामने खड़ी थी।</p>
-    <p>भीड़ में अकेली, और अकेलेपन में भी पूरी।</p>
+    <p>उसने फोन देखा। वही नंबर, जो आज भी सेव था।</p>
+    <p>नाम नहीं… बस एक एहसास।</p>
+    <div class="page-number">Page 3</div>
   </div>
 
-  <!-- PAGE 4 -->
   <div class="page">
-    <p>उसकी आँखों में सवाल थे,</p>
-    <p>और मेरे पास सिर्फ़ एक अधूरी समझ।</p>
+    <p>समय बीत गया था, लेकिन कुछ बातें वहीं रुक गई थीं।</p>
+    <p>जैसे किसी ने कहानी बीच में छोड़ दी हो।</p>
+    <div class="page-number">Page 4</div>
   </div>
 
-  <!-- PAGE 5 -->
   <div class="page">
-    <p>कुछ रिश्ते शब्द नहीं माँगते।</p>
-    <p>वो बस महसूस किए जाते हैं, निभाए नहीं जाते।</p>
+    <p>यह अंत नहीं था।</p>
+    <p>यह एक मोड़ था, जहाँ से कहानी और गहरी होती है।</p>
+    <div class="page-number">Page 5</div>
   </div>
 
-  <!-- PAGE 6 -->
-  <div class="page">
-    <p>शायद यही देवनागरी थी।</p>
-    <p>एक भाषा, जो लिखी कम और जी ज़्यादा जाती है।</p>
-  </div>
+</div>
 
-  <!-- PAGE 7 -->
-  <div class="page">
-    <p>और इसी खामोशी से,</p>
-    <p>एक कहानी ने जन्म लिया…</p>
-  </div>
+<div class="donate" onclick="alert('❤️ Thank you for supporting the writer')">❤️</div>
 
-  <div class="nav">
-    <a href="../../index.html">← Novel Page</a>
-    <a href="../chapter-02/index.html">Next Chapter →</a>
-  </div>
-
+<div class="nav">
+  <a href="chapter0.html">⬅ Previous</a>
+  <a href="index.html">🏠 Home</a>
+  <a href="chapter2.html">Next ➡</a>
 </div>
 
 <script>
-function toggleMode(){
-  document.body.classList.toggle("sepia");
+function toggleDark() {
+  document.body.classList.toggle("dark");
 }
 </script>
 
