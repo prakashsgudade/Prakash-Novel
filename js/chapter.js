@@ -1,23 +1,18 @@
-// DARK / SEPIA MODE TOGGLE
-function toggleMode(){
-  document.body.classList.toggle('dark-mode');
-}
+let currentPage = 1;
+const pages = document.querySelectorAll(".page");
 
-// FONT CONTROL
-let content = document.querySelectorAll('.content p');
-let fontSize = 18;
+document.getElementById("totalPages").innerText = pages.length;
 
-function increaseFont(){
-  fontSize += 1;
-  content.forEach(p => p.style.fontSize = fontSize + 'px');
-}
-
-function decreaseFont(){
-  fontSize -= 1;
-  content.forEach(p => p.style.fontSize = fontSize + 'px');
-}
-
-// PAGE NUMBERING
-document.querySelectorAll('.page').forEach((page, i) => {
-  page.style.counterReset = 'page ' + (i+1);
+window.addEventListener("scroll", () => {
+  pages.forEach((page, index) => {
+    const rect = page.getBoundingClientRect();
+    if(rect.top < window.innerHeight/2 && rect.bottom > window.innerHeight/2){
+      currentPage = index + 1;
+      document.getElementById("pageNum").innerText = currentPage;
+    }
+  });
 });
+
+function toggleTheme(){
+  document.body.classList.toggle("light");
+}
