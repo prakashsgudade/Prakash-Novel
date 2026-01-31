@@ -5,6 +5,7 @@ body {
   background: #f5efe6;
   color: #2b2b2b;
   transition: background 0.4s ease, color 0.4s ease;
+  scroll-behavior: smooth; /* smooth scroll */
 }
 
 /* ===== DARK MODE ===== */
@@ -13,7 +14,7 @@ body.dark {
   color: #e6e6e6;
 }
 
-/* ===== DARK TOGGLE ===== */
+/* ===== DARK TOGGLE BUTTON ===== */
 .dark-toggle {
   position: fixed;
   left: 14px;
@@ -46,14 +47,13 @@ body.dark .dark-toggle {
   z-index: 999;
 }
 
-/* ===== CONTENT WRAPPER ===== */
+/* ===== CHAPTER CONTENT ===== */
 .chapter-container {
   max-width: 720px;
   margin: auto;
   padding: 28px 20px 60px;
 }
 
-/* ===== TITLES ===== */
 .chapter-title {
   text-align: center;
   font-size: 36px;
@@ -96,16 +96,19 @@ body.dark .dark-toggle {
   background: linear-gradient(135deg, #000, #333);
   color: #fff;
   transition: all 0.3s ease;
+  position: relative;
 }
 
-/* hover feel */
+/* hover effect */
 .nav-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* ===== NEXT CHAPTER GLOW ===== */
-.nav-btn.next-glow {
+/* ===== GLOW FOR LAST PAGE / NEXT CHAPTER ===== */
+.nav-btn.next-glow,
+.nav-btn.previous-glow,
+.nav-btn.home-glow {
   animation: glow 2s infinite;
 }
 
@@ -115,7 +118,7 @@ body.dark .dark-toggle {
   100% { box-shadow: 0 0 5px rgba(255,200,0,0.4); }
 }
 
-/* ===== ANIMATION ===== */
+/* ===== PAGE ANIMATION ===== */
 @keyframes fade {
   from { opacity:0; transform: translateY(25px); }
   to { opacity:1; transform: translateY(0); }
@@ -124,4 +127,4 @@ body.dark .dark-toggle {
 /* ===== MOBILE ===== */
 @media (max-width:600px){
   .page p { font-size: 17.5px; }
-        }
+}
