@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  counter.innerText = `पृष्ठ ${current} / ${totalPages}`;
+  counter.innerText = `page ${current} / ${totalPages}`;
 });
 
 /* ===== DARK MODE ===== */
