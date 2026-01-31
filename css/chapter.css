@@ -127,4 +127,4 @@ body.dark .dark-toggle {
 /* ===== MOBILE ===== */
 @media (max-width:600px){
   .page p { font-size: 17.5px; }
-}
+    }
