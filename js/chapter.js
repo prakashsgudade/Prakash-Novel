@@ -33,4 +33,4 @@ if (navButtons.length > 0) {
       navButtons[1].classList.add("previous-glow"); // middle button glow (previous)
     }
   }
-    }
+}
