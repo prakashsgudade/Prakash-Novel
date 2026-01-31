@@ -1,19 +1,25 @@
-// THEME TOGGLE
-const themeBtn = document.getElementById("themeToggle");
+document.addEventListener("DOMContentLoaded", () => {
 
-themeBtn.addEventListener("click", () => {
+  const pages = document.querySelectorAll(".page");
+  const counter = document.getElementById("pageCounter");
+  const totalPages = pages.length;
+
+  window.addEventListener("scroll", () => {
+    let current = 1;
+
+    pages.forEach((page, i) => {
+      if (page.getBoundingClientRect().top < window.innerHeight / 2) {
+        current = i + 1;
+      }
+    });
+
+    if (counter) {
+      counter.innerText = "पृष्ठ " + current + " / " + totalPages;
+    }
+  });
+
+});
+
+function toggleDark() {
   document.body.classList.toggle("dark");
-
-  if (document.body.classList.contains("dark")) {
-    themeBtn.textContent = "☀️";
-  } else {
-    themeBtn.textContent = "🌙";
-  }
-});
-
-// LIKE BUTTON
-const likeBtn = document.getElementById("likeBtn");
-
-likeBtn.addEventListener("click", () => {
-  likeBtn.textContent = "💖";
-});
+}
