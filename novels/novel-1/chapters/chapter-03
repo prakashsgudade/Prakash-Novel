@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>देवनागरी -📖अध्याय 3 - पास आना</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SAME CSS FOR ALL CHAPTERS -->
+  <link rel="stylesheet" href="../chapter.css">
+</head>
+
+<a href="../donate.html" class="support-float" aria-label="Support the author">❤️</a>
+
+<style>
+.support-float{
+  position: fixed;
+  bottom: 22px;
+  right: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top,#ff6b6b,#c9184a);
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse{
+  0%{ transform: scale(1); box-shadow:0 0 0 0 rgba(255,75,75,0.6);}
+  70%{ transform: scale(1.08); box-shadow:0 0 0 18px rgba(255,75,75,0);}
+  100%{ transform: scale(1); }
+}
+</style>
+
+<body>
+
+<!-- DARK MODE -->
+<button class="dark-toggle" onclick="toggleDark()">🌙</button>
+
+<!-- PAGE COUNTER -->
+<div class="page-counter" id="pageCounter">पृष्ठ 1</div>
+
+<div class="chapter-container">
+
+  <h1 class="chapter-title">देवनागरी</h1>
+  <h2 class="chapter-subtitle">अध्याय 3 – पास आना</h2>
+
+  <!-- PAGE 1 -->
+  <div class="page">
+    <p>
+      देव ने ये नहीं सोचा था कि किसी के पास होना इतना खामोश भी हो सकता है।  
+      न कोई वादा, न कोई इज़हार—  
+      बस नंदिनी का सामने होना,  
+      और बाकी सब चीज़ों का पीछे छूट जाना।
+    </p>
+    <p>
+      देवना गिरी की गलियों में लोग बहुत कुछ देख लेते थे,  
+      इसीलिए यहाँ भावनाएँ ज़्यादा बोलती नहीं थीं।
+    </p>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <p>
+      नंदिनी अब रोज़ दिख जाती थी।  
+      कभी मंदिर की सीढ़ियों पर,  
+      कभी कुएँ के पास,  
+      कभी बस… अचानक।
+    </p>
+    <p>
+      देव उसे देखने की कोशिश नहीं करता था,  
+      पर न देखने की कोशिश में  
+      वो और साफ़ दिख जाती थी।
+    </p>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="page">
+    <p>
+      एक दिन नंदिनी ने खुद कहा,  
+      “तुम हमेशा ऐसे ही चुप रहते हो?”
+    </p>
+    <p>
+      देव थोड़ी देर चुप रहा।  
+      फिर बोला—  
+      “कुछ बातें बोलने से हल्की नहीं होतीं।”
+    </p>
+    <p>
+      नंदिनी मुस्कुरा दी।  
+      उसे समझ आ गया था—  
+      ये लड़का बात कम करता है,  
+      पर भीतर बहुत कुछ समेटे हुए है।
+    </p>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div class="page">
+    <p>
+      वे दोनों मंदिर के पीछे वाली गली में खड़े थे।  
+      घंटी की आवाज़ आ रही थी।  
+      हवा धीमी थी।
+    </p>
+    <p>
+      नंदिनी ने कहा,  
+      “यहाँ सब लोग देखते रहते हैं।”
+    </p>
+    <p>
+      देव ने जवाब नहीं दिया।  
+      बस इतना कहा—  
+      “देखने से क्या होता है?”
+    </p>
+    <p>
+      पर दोनों जानते थे—  
+      देवना गिरी में  
+      देखा जाना ही सबसे बड़ा डर होता है।
+    </p>
+  </div>
+
+  <!-- PAGE 5 -->
+  <div class="page">
+    <p>
+      उस शाम पहली बार ऐसा हुआ  
+      कि दोनों देर तक एक साथ खड़े रहे,  
+      बिना जल्दी, बिना बहाने।
+    </p>
+    <p>
+      नंदिनी ने अपने दुपट्टे का कोना ठीक किया।  
+      देव ने ज़मीन की तरफ देखा।
+    </p>
+    <p>
+      इतनी नज़दीकी में भी  
+      उनके बीच एक मर्यादा थी—  
+      जो समाज ने नहीं,  
+      उनकी अपनी परवरिश ने बनाई थी।
+    </p>
+  </div>
+
+  <!-- PAGE 6 -->
+  <div class="page">
+    <p>
+      “अगर…”  
+      नंदिनी ने बात अधूरी छोड़ दी।
+    </p>
+    <p>
+      देव ने उसकी तरफ देखा।  
+      “अगर क्या?”
+    </p>
+    <p>
+      नंदिनी ने सिर हिला दिया।  
+      “कुछ नहीं।”
+    </p>
+    <p>
+      पर उस अधूरे वाक्य ने  
+      दोनों के दिल में  
+      पूरी लाइन लिख दी।
+    </p>
+  </div>
+
+  <!-- PAGE 7 -->
+  <div class="page">
+    <p>
+      घर लौटते वक़्त  
+      देव को महसूस हुआ—  
+      आज कुछ बदला है।
+    </p>
+    <p>
+      नंदिनी अब सिर्फ दिखती नहीं थी,  
+      वो भीतर रहने लगी थी।
+    </p>
+    <p>
+      और नंदिनी को ये एहसास हुआ—  
+      कुछ रिश्ते  
+      नाम लेने से पहले ही  
+      ज़िम्मेदारी बन जाते हैं।
+    </p>
+    <p>
+      देवना गिरी की गलियों ने  
+      कुछ नहीं कहा,  
+      पर सब देख लिया।
+    </p>
+    <p>
+      और यही  
+      उनका सबसे बड़ा सच था।
+    </p>
+  </div>
+
+  <!-- NAVIGATION (FIXED) -->
+  <div class="nav-buttons">
+    <a href="../index.html" class="nav-btn">🏠 Novel Home</a>
+    <a href="../chapter-02/index.html" class="nav-btn">⬅️ पिछला अध्याय</a>
+    <a href="../chapter-04/index.html" class="nav-btn">अगला अध्याय ➡️</a>
+  </div>
+
+</div>
+
+<!-- SAME JS FOR ALL CHAPTERS -->
+<script src="../chapter.js"></script>
+
+</body>
+</html>
