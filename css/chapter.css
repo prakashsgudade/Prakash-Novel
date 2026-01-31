@@ -22,9 +22,9 @@ body.dark {
   border: none;
   background: #111;
   color: #fff;
-  padding: 10px 14px;
+  padding: 8px 12px; /* thoda chhota */
   border-radius: 50%;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   z-index: 1000;
   transition: all 0.3s ease;
@@ -41,9 +41,9 @@ body.dark .dark-toggle {
   right: 14px;
   background: rgba(0,0,0,0.75);
   color: #fff;
-  padding: 6px 16px;
+  padding: 5px 12px; /* thoda chhota */
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 13px; /* thoda chhota */
   z-index: 999;
 }
 
@@ -56,26 +56,26 @@ body.dark .dark-toggle {
 
 .chapter-title {
   text-align: center;
-  font-size: 36px;
+  font-size: 34px; /* thoda chhota */
   margin-bottom: 8px;
 }
 
 .chapter-subtitle {
   text-align: center;
   opacity: 0.7;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 /* ===== PAGES ===== */
 .page {
-  margin-bottom: 90px;
+  margin-bottom: 80px;
   animation: fade 0.9s ease;
 }
 
 .page p {
-  font-size: 19px;
+  font-size: 18px;
   line-height: 2;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   letter-spacing: 0.2px;
 }
 
@@ -83,26 +83,25 @@ body.dark .dark-toggle {
 .nav-buttons {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin-top: 50px;
+  gap: 14px; /* thoda chhota gap */
+  margin-top: 40px;
 }
 
 .nav-btn {
   text-decoration: none;
   text-align: center;
-  padding: 16px 28px;
-  border-radius: 40px;
-  font-size: 16px;
+  padding: 12px 22px; /* thoda chhota */
+  border-radius: 30px; /* chhota aur modern */
+  font-size: 15px; /* chhota */
   background: linear-gradient(135deg, #000, #333);
   color: #fff;
   transition: all 0.3s ease;
   position: relative;
 }
 
-/* hover effect */
 .nav-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 
 /* ===== GLOW FOR LAST PAGE / NEXT CHAPTER ===== */
@@ -114,7 +113,7 @@ body.dark .dark-toggle {
 
 @keyframes glow {
   0% { box-shadow: 0 0 5px rgba(255,200,0,0.4); }
-  50% { box-shadow: 0 0 20px rgba(255,200,0,0.9); }
+  50% { box-shadow: 0 0 18px rgba(255,200,0,0.9); }
   100% { box-shadow: 0 0 5px rgba(255,200,0,0.4); }
 }
 
@@ -126,5 +125,32 @@ body.dark .dark-toggle {
 
 /* ===== MOBILE ===== */
 @media (max-width:600px){
-  .page p { font-size: 17.5px; }
+  .page p { font-size: 17px; }
+}
+
+/* ===== SUPPORT FLOATING HEART ===== */
+.support-float{
+  position: fixed;
+  bottom: 22px;
+  right: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top,#ff6b6b,#c9184a);
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: pulse 2.5s infinite;
+}
+
+/* soft breathing animation */
+@keyframes pulse{
+  0%{ transform: scale(1); box-shadow:0 0 0 0 rgba(255,75,75,0.6);}
+  70%{ transform: scale(1.08); box-shadow:0 0 0 18px rgba(255,75,75,0);}
+  100%{ transform: scale(1); }
     }
