@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support the Author</title>
 
+<style>
+body{
+  margin:0;
+  background: radial-gradient(circle at top,#1b1b1b,#000);
+  color:#f5f5f5;
+  font-family: Georgia, serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+.card{
+  max-width:420px;
+  width:90%;
+  background: rgba(255,255,255,0.04);
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 30px 80px rgba(0,0,0,0.6);
+}
+
+h1{
+  font-weight:normal;
+  letter-spacing:1px;
+}
+
+p{
+  opacity:0.85;
+  line-height:1.6;
+  font-size:15px;
+}
+
+.amounts a{
+  display:block;
+  margin:14px 0;
+  padding:14px;
+  background: linear-gradient(135deg,#ff416c,#ff4b2b);
+  color:white;
+  text-decoration:none;
+  border-radius:14px;
+  font-size:18px;
+  font-weight:bold;
+  transition: transform .2s;
+}
+.amounts a:hover{
+  transform: scale(1.05);
+}
+
+.qr{
+  margin-top:24px;
+}
+.qr img{
+  width:180px;
+  border-radius:12px;
+  background:white;
+  padding:10px;
+}
+
+.small{
+  margin-top:16px;
+  font-size:13px;
+  opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>❤️ Support the Author</h1>
+
+  <p>
+    Agar is kahani ne  
+    aapke dil ko thoda sa bhi chhua ho,  
+    toh aapka support is safar ko zinda rakhega.
+  </p>
+
+  <div class="amounts">
+    <a href="upi://pay?pa=prakash.gudade@ybl&pn=Author&am=49&cu=INR">₹49 – Ek Chai</a>
+    <a href="upi://pay?pa=prakash.gudade@ybl&pn=Author&am=99&cu=INR">₹99 – Ek Muskaan</a>
+    <a href="upi://pay?pa=prakash.gudade@ybl&pn=Author&am=149&cu=INR">₹149 – Ek Dua</a>
+  </div>
+
+  <div class="qr">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=prakash.gudade@ybl&pn=Author&cu=INR">
+  </div>
+
+  <div class="small">
+    Aapka pyaar hi meri sabse badi taqat hai.
+  </div>
+</div>
+
+</body>
+</html>
