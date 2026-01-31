@@ -2,82 +2,152 @@
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
-  <title>देवनागरी | अध्याय 01</title>
+  <title>देवनागरी -📖अध्याय 1 - देवना गिरी की सुबह</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Hind:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- CHAPTER CSS -->
-  <link rel="stylesheet" href="../../../css/chapter.css">
+  <!-- SAME CSS FOR ALL CHAPTERS -->
+  <link rel="stylesheet" href="../chapter.css">
 </head>
+  <a href="../donate.html" class="support-float" aria-label="Support the author">
+  ❤️
+</a>
 
+<style>
+.support-float{
+  position: fixed;
+  bottom: 22px;
+  right: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top,#ff6b6b,#c9184a);
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: pulse 2.5s infinite;
+}
+
+/* soft breathing animation */
+@keyframes pulse{
+  0%{ transform: scale(1); box-shadow:0 0 0 0 rgba(255,75,75,0.6);}
+  70%{ transform: scale(1.08); box-shadow:0 0 0 18px rgba(255,75,75,0);}
+  100%{ transform: scale(1); }
+}
+</style>
 <body>
 
-<div class="reader">
+<!-- DARK MODE -->
+<button class="dark-toggle" onclick="toggleDark()">🌙</button>
 
-  <!-- TOP CONTROLS -->
-  <div class="top-bar">
-    <button onclick="toggleTheme()">🌙</button>
-    <div class="page-count">
-      Page <span id="pageNum">1</span> / <span id="totalPages">7</span>
-    </div>
+<!-- PAGE COUNTER -->
+<div class="page-counter" id="pageCounter">पृष्ठ 1</div>
+
+<div class="chapter-container">
+
+  <h1 class="chapter-title">देवनागिरी</h1>
+  <h2 class="chapter-subtitle">अध्याय 1 – पहली झलक</h2>
+
+  <!-- PAGE 1 -->
+  <div class="page">
+    <p><b>पहली झलक – देवना गिरी</b></p>
+    <p>
+      देवना गिरी… छोटा शहर, या फिर कस्बा—जैसे ज़िन्दगी ने थोड़ा रुक कर यह जगह बनाई हो।  
+      मंदिर की घंटी बजी, और हवा में पुराना सा सुकून घुल गया।
+    </p>
+    <p>
+      गलियाँ पुरानी, पतली, और कुछ मोड़ ऐसे जहाँ से लोग एक-दूसरे को देख लेते हैं।  
+      शाम का सन्नाटा अलग ही होता है—जैसे शहर खुद सो रहा हो, पर अंदर कुछ छुप-छुप के चल रहा हो।
+    </p>
+    <p>
+      यहाँ… प्यार छुप-छुप के होता है,  
+      और फैसले सबके सामने।
+    </p>
   </div>
 
-  <!-- BOOK -->
-  <div class="book">
-
-    <div class="page">
-      <h1>देवनागरी</h1>
-      <h2>अध्याय 01 — शुरुआत</h2>
-
-      <p>कुछ कहानियाँ शब्दों से नहीं, खामोशियों से शुरू होती हैं।</p>
-      <p>उस दिन हवा भी ठहरी हुई थी, जैसे समय ने साँस रोक ली हो।</p>
-    </div>
-
-    <div class="page">
-      <p>मैंने उसे देखा — भीड़ में अकेली, और अकेलेपन में भी पूरी।</p>
-      <p>उसकी आँखों में सवाल थे, और मेरे पास जवाब नहीं।</p>
-    </div>
-
-    <div class="page">
-      <p>कुछ रिश्ते आवाज़ नहीं चाहते, बस एहसास बनकर रह जाते हैं।</p>
-      <p>शायद यही मोहब्बत की असली भाषा होती है।</p>
-    </div>
-
-    <div class="page">
-      <p>वक़्त गुजरता गया, पर वो पल वहीं ठहरा रहा।</p>
-      <p>जैसे किसी किताब का पसंदीदा पन्ना।</p>
-    </div>
-
-    <div class="page">
-      <p>हर कहानी का एक मोड़ होता है।</p>
-      <p>और यही देवनागरी की पहली करवट थी।</p>
-    </div>
-
-    <div class="page">
-      <p>शब्द कम थे, पर असर गहरा।</p>
-      <p>कहानी शुरू हो चुकी थी।</p>
-    </div>
-
-    <div class="page">
-      <p><strong>— अध्याय 01 समाप्त</strong></p>
-    </div>
-
+  <!-- PAGE 2 -->
+  <div class="page">
+    <p>
+      छत पर देव खड़ा था।  
+      हाथ में चाय का कप, पर चाय से ज्यादा गरम उसके ख़याल थे।
+    </p>
+    <p>
+      रोज़ की तरह, सुबह का पहला घूँट उसकी थकान को नहीं मिटा रहा था।  
+      देवना गिरी में सब कुछ दिख जाता था—कौन किससे बात करता है, कौन कहाँ छुप के जाता है।
+    </p>
   </div>
 
-  <!-- NAV BUTTONS -->
+  <!-- PAGE 3 -->
+  <div class="page">
+    <p>
+      नीचे गली में बच्चे स्कूल जा रहे थे, उनके बैग उनके कंधों से बड़े लग रहे थे।  
+      एक साइकिल तेज आवाज़ के साथ मुड़ रही थी, और एक औरत छत पर कपड़े फैला रही थी।  
+      ज़िन्दगी चल रही थी। बिना रुके।
+    </p>
+    <p>
+      देव ने चाय का एक घूँट लिया।  
+      खामोशी उसकी आदत थी, ना कि कमजोरी।
+    </p>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div class="page">
+    <p>
+      नीचे से आवाज़ आई—<br>
+      “देव!”  
+      समीर था। हमेशा की तरह जल्दी में, हमेशा की तरह ज़िंदा।
+    </p>
+    <p>
+      देव ने हाथ उठाकर इशारा किया। बोला कुछ नहीं।  
+      समीर को देव की आदत पता थी—कम बोलता है, पर जब बोलता है, बात सीधे दिल तक जाती है।
+    </p>
+  </div>
+
+  <!-- PAGE 5 -->
+  <div class="page">
+    <p>
+      मंदिर के पीछे वाली गली में, नंदिनी अपने घर के आंगन में पौधों को पानी दे रही थी।  
+      उसने आसमान की तरफ देखा—सुबह साफ़ थी, पर मन में कुछ बाकी था जो साफ़ नहीं हो रहा था।
+    </p>
+    <p>
+      देव और नंदिनी अभी एक-दूसरे की ज़िन्दगी नहीं थे।  
+      बस एक ही शहर का हिस्सा थे, एक ही हवा में साँस ले रहे थे।
+    </p>
+  </div>
+
+  <!-- PAGE 6 -->
+  <div class="page">
+    <p>
+      और कहानी यहीं से शुरू होती है…  
+      जहाँ लोग एक-दूसरे को जानते नहीं,  
+      पर किस्मत पहले ही मिलवा चुकी होती है।
+    </p>
+    <p>
+      देवना गिरी ने उस सुबह कुछ खास महसूस किया।  
+      जैसे शहर खुद जानता हो—आज से कुछ बदलने वाला है।
+    </p>
+    <p>
+      और देव…  
+      देव अभी नहीं जानता था,  
+      कि जो सुबह इतनी शांत लग रही है,  
+      वो उसकी ज़िन्दगी का शोर बनने वाली है।
+    </p>
+  </div>
+
+  <!-- NAVIGATION -->
   <div class="nav-buttons">
-    <a href="../../../index.html">🏠 Home</a>
-    <a href="../chapter-02/index.html">➡ Next</a>
+    <a href="../index.html" class="nav-btn">🏠 नॉवेल होम</a>
+    <a href="../chapter2/index.html" class="nav-btn">अगला अध्याय ➡️</a>
   </div>
 
 </div>
 
-<!-- DONATE BUTTON -->
-<a href="../../../donate" class="donate">❤️</a>
+<!-- SAME JS FOR ALL CHAPTERS -->
+<script src="../chapter.js"></script>
 
-<!-- JS -->
-<script src="../../../js/chapter.js"></script>
 </body>
-</html>
+  </html>
