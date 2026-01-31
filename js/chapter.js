@@ -23,8 +23,14 @@ function toggleDark() {
 /* ===== SMOOTH SCROLL ===== */
 document.documentElement.style.scrollBehavior = "smooth";
 
-/* ===== LAST BUTTON GLOW AUTO ===== */
+/* ===== NAV BUTTON GLOW ===== */
 const navButtons = document.querySelectorAll(".nav-btn");
 if (navButtons.length > 0) {
-  navButtons[navButtons.length - 1].classList.add("next-glow");
-}
+  navButtons[navButtons.length - 1].classList.add("next-glow"); // last button glow
+  if(navButtons.length >= 2) {
+    navButtons[0].classList.add("home-glow"); // first button glow (home)
+    if(navButtons.length > 2){
+      navButtons[1].classList.add("previous-glow"); // middle button glow (previous)
+    }
+  }
+    }
