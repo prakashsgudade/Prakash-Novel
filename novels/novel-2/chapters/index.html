@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>अध्याय सूची | उसने मुझे सही समझा, अपना नहीं</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SAME CSS -->
+  <link rel="stylesheet" href="css/chapter.css">
+
+  <style>
+    body{
+      background:#0e0e0e;
+      color:#eee;
+    }
+
+    .chapters-wrapper{
+      max-width:720px;
+      margin:80px auto;
+      padding:20px;
+    }
+
+    .chapters-title{
+      text-align:center;
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .chapters-subtitle{
+      text-align:center;
+      font-size:14px;
+      opacity:0.7;
+      margin-bottom:40px;
+    }
+
+    .chapter-list{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .chapter-item{
+      padding:16px 18px;
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:10px;
+      text-decoration:none;
+      color:#fff;
+      transition:0.3s;
+      background:rgba(255,255,255,0.02);
+    }
+
+    .chapter-item:hover{
+      background:rgba(255,255,255,0.06);
+      transform:translateY(-2px);
+    }
+
+    .chapter-number{
+      font-size:13px;
+      opacity:0.6;
+    }
+
+    .chapter-name{
+      font-size:18px;
+      margin-top:4px;
+    }
+
+    .special{
+      border-color:#c9184a;
+      background:rgba(201,24,74,0.08);
+    }
+
+    .footer-note{
+      text-align:center;
+      margin-top:50px;
+      font-size:13px;
+      opacity:0.5;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="chapters-wrapper">
+
+  <div class="chapters-title">
+    📖 अध्याय सूची
+  </div>
+
+  <div class="chapters-subtitle">
+    “यह कहानी धीरे-धीरे नहीं टूटती,<br>
+    यह चुपचाप खत्म होती है।”
+  </div>
+
+  <div class="chapter-list">
+
+    <a href="chapters/chapter-01/index.html" class="chapter-item">
+      <div class="chapter-number">अध्याय 1</div>
+      <div class="chapter-name">बरसात की पहली खामोशी</div>
+    </a>
+
+    <a href="chapters/chapter-02/index.html" class="chapter-item">
+      <div class="chapter-number">अध्याय 2</div>
+      <div class="chapter-name">किताबों की दुकान</div>
+    </a>
+
+    <a href="chapters/chapter-03/index.html" class="chapter-item">
+      <div class="chapter-number">अध्याय 3</div>
+      <div class="chapter-name">जो कहा नहीं गया</div>
+    </a>
+
+    <a href="chapters/chapter-04/index.html" class="chapter-item">
+      <div class="chapter-number">अध्याय 4</div>
+      <div class="chapter-name">डर का सबसे शांत रूप</div>
+    </a>
+
+    <a href="chapters/chapter-05/index.html" class="chapter-item">
+      <div class="chapter-number">अध्याय 5</div>
+      <div class="chapter-name">माँ की पसंद</div>
+    </a>
+
+    <a href="chapters/chapter-06/index.html" class="chapter-item">
+      <div class="chapter-number">अध्याय 6</div>
+      <div class="chapter-name">सबसे बड़ा झूठ</div>
+    </a>
+
+    <a href="chapters/chapter-07/index.html" class="chapter-item">
+      <div class="chapter-number">अध्याय 7</div>
+      <div class="chapter-name">जो छोड़ दिया गया</div>
+    </a>
+
+    <!-- SPECIAL -->
+
+    <a href="chapters/alternate-ending/index.html" class="chapter-item special">
+      <div class="chapter-number">✨ Alternate Ending</div>
+      <div class="chapter-name">अगर उसने हिम्मत की होती</div>
+    </a>
+
+    <a href="chapters/epilogue/index.html" class="chapter-item special">
+      <div class="chapter-number">🌙 Epilogue</div>
+      <div class="chapter-name">एक साल बाद</div>
+    </a>
+
+  </div>
+
+  <div class="footer-note">
+    उसने मुझे सही समझा,<br>
+    अपना नहीं।
+  </div>
+
+</div>
+
+</body>
+</html>
