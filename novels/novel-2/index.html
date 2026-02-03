@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>उसने मुझे सही समझा, अपना नहीं</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Hind:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      margin:0;
+      font-family:'Hind', sans-serif;
+      background:#0e0e0e;
+      color:#eaeaea;
+      line-height:1.7;
+    }
+
+    a{ text-decoration:none; }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:40px 20px;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.75), rgba(0,0,0,.95)),
+        url("cover.jpg") center/cover no-repeat;
+    }
+
+    .hero h1{
+      font-family:'Playfair Display', serif;
+      font-size:2.6rem;
+      margin-bottom:10px;
+      color:#ffd6a5;
+    }
+
+    .hero p{
+      max-width:700px;
+      margin:0 auto 30px;
+      font-size:1.05rem;
+      opacity:.9;
+    }
+
+    .start-btn{
+      display:inline-block;
+      padding:14px 30px;
+      border-radius:30px;
+      background:#c9184a;
+      color:white;
+      font-size:1rem;
+      box-shadow:0 10px 30px rgba(201,24,74,.4);
+    }
+
+    section{
+      padding:60px 20px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    h2{
+      font-family:'Playfair Display', serif;
+      font-size:1.8rem;
+      margin-bottom:20px;
+      color:#ffb3c1;
+    }
+
+    .quote{
+      font-style:italic;
+      border-left:3px solid #c9184a;
+      padding-left:15px;
+      opacity:.9;
+    }
+
+    .characters{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#151515;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,.4);
+    }
+
+    footer{
+      text-align:center;
+      padding:30px 20px;
+      font-size:.85rem;
+      opacity:.6;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>उसने मुझे सही समझा, अपना नहीं</h1>
+    <p>
+      इलाहाबाद की बरसाती गलियों में  
+      एक ऐसा प्यार  
+      जो सही था…  
+      पर साहस से खाली।
+    </p>
+    <a href="chapters/chapter-01/index.html" class="start-btn">
+      📖 पढ़ना शुरू करें
+    </a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+  <h2>कहानी के बारे में</h2>
+  <p>
+    यह कहानी है <b>अद्वैत</b> और <b>मृणाल</b> की—  
+    जहाँ मोहब्बत शोर नहीं करती,  
+    बस इंतज़ार करती है।
+  </p>
+
+  <p class="quote">
+    “कुछ लोग प्यार इसलिए हार जाते हैं  
+    क्योंकि वो किसी को तोड़ना नहीं चाहते।”
+  </p>
+</section>
+
+<!-- CHARACTERS -->
+<section>
+  <h2>मुख्य किरदार</h2>
+
+  <div class="characters">
+    <div class="card">
+      <h3>अद्वैत</h3>
+      <p>
+        हिंदी साहित्य का छात्र।  
+        बेहद शरीफ़।  
+        इतना कि अपनी मोहब्बत को  
+        पाप समझ बैठा।
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>मृणाल</h3>
+      <p>
+        ज़िंदा दिल।  
+        उम्मीद से भरी।  
+        जिसने अद्वैत को सही समझा—  
+        और वहीं हार गई।
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- THEME -->
+<section>
+  <h2>इस कहानी का दर्द</h2>
+  <p>
+    यह प्रेम कहानी नहीं है।  
+    यह <b>चुपचाप छोड़े जाने</b> की कहानी है।
+  </p>
+
+  <p class="quote">
+    “सबसे बड़ा गुनाह  
+    किसी को गलत छोड़ना नहीं,  
+    सही समझकर छोड़ देना है।”
+  </p>
+</section>
+
+<footer>
+  © देवनागरी | एक अधूरी मोहब्बत की दस्तावेज़
+</footer>
+
+</body>
+  </html>
