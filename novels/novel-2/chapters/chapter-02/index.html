@@ -2,114 +2,280 @@
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
-  <title>Chapter 2 – वो हँसी जो ज़्यादा देर टिकती नहीं</title>
+  <title>उसने मुझे सही समझा, अपना नहीं – अध्याय 2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Common CSS -->
+  <!-- SAME CSS FOR ALL CHAPTERS -->
   <link rel="stylesheet" href="../../../../css/chapter.css">
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="chapter-header">
-    <h1>Chapter 2</h1>
-    <h2>वो हँसी जो ज़्यादा देर टिकती नहीं</h2>
-  </header>
+<!-- FLOATING SUPPORT BUTTON -->
+<a href="../../../../donate/index.html" class="support-float" aria-label="Support the author">❤️</a>
 
-  <!-- CONTENT -->
-  <main class="chapter-content">
+<style>
+.support-float{
+  position: fixed;
+  bottom: 22px;
+  right: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top,#ff6b6b,#c9184a);
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: pulse 2.5s infinite;
+}
 
-    <p>अद्वैत उस दिन किताब लेने नहीं आया था।<br>
-    वो बस खुद से भागता हुआ किताबों की दुकान में घुस गया था।</p>
+@keyframes pulse{
+  0%{ transform: scale(1); box-shadow:0 0 0 0 rgba(255,75,75,0.6);}
+  70%{ transform: scale(1.08); box-shadow:0 0 0 18px rgba(255,75,75,0);}
+  100%{ transform: scale(1); }
+}
+</style>
 
-    <p>बाहर की दुनिया उससे बहुत सवाल पूछ रही थी—<br>
-    घर, भविष्य, ज़िम्मेदारी।<br>
-    और वो हर सवाल से थक चुका था।</p>
+<!-- DARK MODE -->
+<button class="dark-toggle" onclick="toggleDark()">🌙</button>
 
-    <p>तभी वो दिखी।</p>
+<!-- PAGE COUNTER -->
+<div class="page-counter" id="pageCounter">पृष्ठ 1</div>
 
-    <p><strong>मृणाल।</strong></p>
+<div class="chapter-container">
 
-    <p>हँस रही थी।<br>
-    किसी किताब के पन्ने पर नहीं,<br>
-    किसी ख़याल पर।</p>
+  <h1 class="chapter-title">उसने मुझे सही समझा, अपना नहीं</h1>
+  <h2 class="chapter-subtitle">📖 अध्याय 2 – थोड़ी सी बातचीत</h2>
 
-    <p>उसकी हँसी में कोई बनावट नहीं थी,<br>
-    जैसे उसे अभी तक खुद को संभालना सिखाया ही न गया हो।</p>
+  <!-- PAGE 1 -->
+  <div class="page">
+    <p>
+      अगले दिन  
+      अद्वैत फिर आया।
+    </p>
 
-    <p>अद्वैत ने नज़र हटा ली।<br>
-    उसके जैसे लोगों को सीधी ख़ुशियाँ देखना अच्छा नहीं लगता।</p>
+    <p>
+      इस बार  
+      बारिश नहीं थी,
+    </p>
 
-    <p>मृणाल ने उसे देख लिया।</p>
+    <p>
+      पर मन  
+      वैसा ही  
+      भीगा हुआ था।
+    </p>
+  </div>
 
-    <p>“आप फिर आ गए?”</p>
+  <!-- PAGE 2 -->
+  <div class="page">
+    <p>
+      किताबों की दुकान  
+      वैसी ही थी—
+    </p>
 
-    <p>उसकी आवाज़ में हैरानी नहीं थी—<br>
-    जैसे उसे यक़ीन था।</p>
+    <p>
+      धूल,  
+      स्याही की गंध,  
+      और  
+      धीमी साँसें।
+    </p>
+  </div>
 
-    <p>अद्वैत बोला नहीं।<br>
-    बस किताब का पन्ना पलट दिया,<br>
-    जो वो पढ़ ही नहीं रहा था।</p>
+  <!-- PAGE 3 -->
+  <div class="page">
+    <p>
+      मृणाल  
+      काउंटर के पास  
+      बैठी थी।
+    </p>
 
-    <p>“आप ऐसे खड़े रहते हैं<br>
-    जैसे किसी का इंतज़ार कर रहे हों<br>
-    जो आने वाला नहीं।”</p>
+    <p>
+      किसी किताब में नहीं,
+    </p>
 
-    <p>ये सुनकर अद्वैत के हाथ काँप गए।</p>
+    <p>
+      खिड़की से बाहर  
+      देख रही थी।
+    </p>
+  </div>
 
-    <p>“ऐसा कुछ नहीं है,”<br>
-    वो झूठ बोला।</p>
+  <!-- PAGE 4 -->
+  <div class="page">
+    <p>
+      अद्वैत  
+      चुपचाप  
+      अंदर आया।
+    </p>
 
-    <p>मृणाल पास आ गई।<br>
-    इतनी पास कि अद्वैत को अपने दिल की आवाज़ सुनाई देने लगी।</p>
+    <p>
+      जैसे कल  
+      की बात  
+      अधूरी छोड़  
+      दी हो।
+    </p>
+  </div>
 
-    <p>“झूठ बोलना भी आपको भारी लगता है,”<br>
-    वो धीमे से बोली।</p>
+  <!-- PAGE 5 -->
+  <div class="page">
+    <p>
+      “आज बारिश नहीं है,”  
+      मृणाल ने कहा।
+    </p>
 
-    <p>ख़ामोशी।</p>
+    <p>
+      उसकी आवाज़  
+      हल्की थी,
+    </p>
 
-    <p>वो ख़ामोशी जो दो अजनबियों के बीच नहीं,<br>
-    दो थके हुए लोगों के बीच होती है।</p>
+    <p>
+      जैसे दबाव नहीं,
+    </p>
 
-    <p>“आप दुखी हैं?”</p>
+    <p>
+      न्योता हो।
+    </p>
+  </div>
 
-    <p>अद्वैत ने पहली बार सीधा जवाब दिया—</p>
+  <!-- PAGE 6 -->
+  <div class="page">
+    <p>
+      “हाँ,”  
+      अद्वैत बोला,
+    </p>
 
-    <p>“नहीं…<br>
-    मैं बस अपनी बारी का इंतज़ार कर रहा हूँ।”</p>
+    <p>
+      “पर आदत  
+      रह जाती है।”
+    </p>
+  </div>
 
-    <p>“किस बात की बारी?”</p>
+  <!-- PAGE 7 -->
+  <div class="page">
+    <p>
+      मृणाल  
+      मुस्कुराई।
+    </p>
 
-    <p>“खुश होने की।”</p>
+    <p>
+      “आप आदतों में  
+      जीते हैं?”
+    </p>
+  </div>
 
-    <p>ये कहते हुए उसकी आँखें झुक गईं।</p>
+  <!-- PAGE 8 -->
+  <div class="page">
+    <p>
+      अद्वैत  
+      कुछ पल  
+      सोचता रहा।
+    </p>
 
-    <p>मृणाल कुछ पल उसे देखती रही।<br>
-    फिर बोली—</p>
+    <p>
+      “नहीं,”  
+      उसने कहा,
+    </p>
 
-    <p>“जो लोग अपनी बारी का इंतज़ार करते हैं न,<br>
-    अद्वैत…<br>
-    अक्सर वही सबसे ज़्यादा खाली रह जाते हैं।”</p>
+    <p>
+      “मैं उनमें  
+      फँस जाता हूँ।”
+    </p>
+  </div>
 
-    <p>बाहर बारिश शुरू हो गई थी।<br>
-    लेकिन दुकान के अंदर कुछ और भीग रहा था।</p>
+  <!-- PAGE 9 -->
+  <div class="page">
+    <p>
+      मृणाल  
+      पहली बार  
+      उसे ध्यान से  
+      देखने लगी।
+    </p>
 
-    <p>उस रात अद्वैत देर तक सो नहीं पाया।</p>
+    <p>
+      जैसे समझने की  
+      कोशिश नहीं,
+    </p>
 
-    <p>क्योंकि कुछ चेहरे<br>
-    नींद से पहले नहीं,<br>
-    ज़िंदगी से पहले आ जाते हैं।</p>
+    <p>
+      इजाज़त  
+      माँग रही हो।
+    </p>
+  </div>
 
-  </main>
+  <!-- PAGE 10 -->
+  <div class="page">
+    <p>
+      “नाम?”  
+      उसने पूछा।
+    </p>
+
+    <p>
+      अद्वैत  
+      चौंका।
+    </p>
+  </div>
+
+  <!-- PAGE 11 -->
+  <div class="page">
+    <p>
+      “अद्वैत,”  
+      उसने धीरे से कहा।
+    </p>
+
+    <p>
+      जैसे नाम नहीं,
+    </p>
+
+    <p>
+      कोई बोझ  
+      रख रहा हो।
+    </p>
+  </div>
+
+  <!-- PAGE 12 -->
+  <div class="page">
+    <p>
+      “मतलब  
+      अकेला,”  
+      मृणाल बोली।
+    </p>
+
+    <p>
+      “पर आप  
+      वैसे नहीं लगते।”
+    </p>
+  </div>
+
+  <!-- PAGE 13 -->
+  <div class="page">
+    <p>
+      अद्वैत  
+      कुछ नहीं बोला।
+    </p>
+
+    <p>
+      क्योंकि  
+      कुछ बातें  
+      सही होने पर  
+      और ज़्यादा  
+      चुभती हैं।
+    </p>
+  </div>
 
   <!-- NAVIGATION -->
-  <nav class="chapter-nav">
-    <a href="../chapter-01/index.html">← Chapter 1</a>
-    <a href="../chapter-03/index.html">Chapter 3 →</a>
-  </nav>
+  <div class="nav-buttons">
+    <a href="../chapter01/index.html" class="nav-btn">⬅️ पिछला अध्याय</a>
+    <a href="../chapter03/index.html" class="nav-btn">अगला अध्याय ➡️</a>
+  </div>
 
-  <!-- COMMON JS -->
-  <script src="../../../../js/chapter.js"></script>
+</div>
+
+<!-- SAME JS FOR ALL CHAPTERS -->
+<script src="../../../../js/chapter.js"></script>
 
 </body>
-      </html>
+</html>
